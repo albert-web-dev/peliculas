@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 100vw;
+}
+/*------------------------------------------header---------------------*/
+.masVista{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100vh;
+}
+.top__imagen{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.top{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.top__menu{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    background-color: rgba(87, 87, 87, 0.15);
+}
+.top__enlace{
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+    margin-left: 25px;
+}
+.top__logo{
+    margin-right: 30px; margin-left: 7.5vh;
+}
+.top__informacion{
+    height: 20vh;
+    margin-left: 7.5vh; margin-top: 40vh;
+}
+
+/*------------------------------------------boton---------------------*/
+.boton{
+    display: inline-block;
+    width: 15vw;
+    height: 6vh;
+    border-radius: 7px;
+    background-color: rgb(151, 151, 151, 0.8);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.boton:hover{
+    background-color: rgb(87, 87, 87);
+}
+
+/*------------------------------------------main cssGrid---------------------*/
+.genero{
+    background-color: #141414;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas: "genero__masPopular     genero__masPopular     genero__masPopular      genero__masPopular"
+                         "genero__masPopular     genero__masPopular     genero__masPopular      genero__masPopular"
+                         "genero__terror         genero__terror         genero__terror          genero__terror"
+                         "genero__terror         genero__terror         genero__terror          genero__terror"
+                         "genero__comedia        genero__comedia        genero__comedia         genero__comedia"
+                         "genero__comedia        genero__comedia        genero__comedia         genero__comedia"
+                         "genero__accion         genero__accion         genero__accion          genero__accion"
+                         "genero__accion         genero__accion         genero__accion          genero__accion"
+                         "genero__romance        genero__romance        genero__romance         genero__romance"
+                         "genero__romance        genero__romance        genero__romance         genero__romance";
+}
+.genero__masPopular{
+    max-width: 100%;
+    grid-area: genero__masPopular;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(10vh, 10vh) minmax(10vh, 1fr)  minmax(10vh, 1fr);
+    
+    grid-template-areas: "masPopular__titulo        masPopular__titulo           masPopular__titulo          masPopular__titulo"
+                         "masPopular__contenedor    masPopular__contenedor2      masPopular__contenedor3     masPopular__contenedor4"
+                         "masPopular__contenedor    masPopular__contenedor2      masPopular__contenedor3     masPopular__contenedor4";
+}
+.genero__terror{
+    grid-area: genero__terror;
+    max-width: 100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(10vh, 10vh) minmax(10vh, 1fr)  minmax(10vh, 1fr);
+    
+    grid-template-areas: "terror__titulo        terror__titulo           terror__titulo          terror__titulo"
+                         "terror__contenedor    terror__contenedor2      terror__contenedor3     terror__contenedor4"
+                         "terror__contenedor    terror__contenedor2      terror__contenedor3     terror__contenedor4";
+}
+.genero__comedia{
+    grid-area: genero__comedia;
+    max-width: 100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(10vh, 10vh) minmax(10vh, 1fr)  minmax(10vh, 1fr);
+    
+    grid-template-areas: "comedia__titulo        comedia__titulo           comedia__titulo          comedia__titulo"
+                         "comedia__contenedor    comedia__contenedor2      comedia__contenedor3     comedia__contenedor4"
+                         "comedia__contenedor    comedia__contenedor2      comedia__contenedor3     comedia__contenedor4";
+}
+.genero__accion{
+    grid-area: genero__accion;
+    max-width: 100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(10vh, 10vh) minmax(10vh, 1fr)  minmax(10vh, 1fr);
+    
+    grid-template-areas: "accion__titulo        accion__titulo           accion__titulo          accion__titulo"
+                         "accion__contenedor    accion__contenedor2      accion__contenedor3     accion__contenedor4"
+                         "accion__contenedor    accion__contenedor2      accion__contenedor3     accion__contenedor4";
+}
+.genero__romance{
+    grid-area: genero__romance;
+    max-width: 100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(10vh, 10vh) minmax(10vh, 1fr)  minmax(10vh, 1fr);
+    
+    grid-template-areas: "romance__titulo        romance__titulo           romance__titulo          romance__titulo"
+                         "romance__contenedor    romance__contenedor2      romance__contenedor3     romance__contenedor4"
+                         "romance__contenedor    romance__contenedor2      romance__contenedor3     romance__contenedor4";
+}
+
+/*------------------------------------------más popular---------------------*/
+.masPopular__titulo{
+    position: relative;
+    width: 100%;
+    background-color: rgb(66, 66, 66, .3);
+    grid-area: masPopular__titulo;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.masPopular__titulo h2{
+    text-align: center;
+    margin-left: 4vw;
+}
+.masPopular__contenedor{
+    grid-area: masPopular__contenedor;
+}
+.masPopular__contenedor2{
+    grid-area: masPopular__contenedor2;
+}
+.masPopular__contenedor3{
+    grid-area: masPopular__contenedor3;
+}
+.masPopular__contenedor4{
+    grid-area: masPopular__contenedor4;
+}
+
+.masPopular__figures{
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.masPopular__imagen{
+    width: 90%;
+    height: 100%;
+   
+}
+.masPopular__Nombre{
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    z-index: 5 !important;
+}
+/*------------------------------------------terror y suspenso---------------------*/
+.terror__figures{
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.terror__imagen{
+    width: 90%;
+    height: 100%;
+   
+}
+.terror__Nombre{
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    z-index: 5 !important;
+}
+.terror__titulo{
+    position: relative;
+    width: 100%;
+    background-color: rgb(66, 66, 66, .3);
+    grid-area: terror__titulo;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.terror__titulo h2{
+    text-align: center;
+    margin-left: 4vw;
+}
+.terror__contenedor{
+    grid-area: terror__contenedor;
+}
+.terror__contenedor2{
+    grid-area: terror__contenedor2;
+}
+.terror__contenedor3{
+    grid-area: terror__contenedor3;
+}
+.terror__contenedor4{
+    grid-area: terror__contenedor4;
+}
+
+/*------------------------------------------comedia---------------------*/
+.comedia__figures{
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.comedia__imagen{
+    width: 90%;
+    height: 100%;
+   
+}
+.comedia__Nombre{
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    z-index: 5 !important;
+}
+.comedia__titulo{
+    position: relative;
+    width: 100%;
+    background-color: rgb(66, 66, 66, .3);
+    grid-area: comedia__titulo;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.comedia__titulo h2{
+    text-align: center;
+    margin-left: 4vw;
+}
+.comedia__contenedor{
+    grid-area: comedia__contenedor;
+}
+.comedia__contenedor2{
+    grid-area: comedia__contenedor2;
+}
+.comedia__contenedor3{
+    grid-area: comedia__contenedor3;
+}
+.comedia__contenedor4{
+    grid-area: comedia__contenedor4;
+}
+
+/*------------------------------------------accion---------------------*/
+.accion__figures{
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.accion__imagen{
+    width: 90%;
+    height: 100%;
+   
+}
+.accion__Nombre{
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    z-index: 5 !important;
+}
+.accion__titulo{
+    position: relative;
+    width: 100%;
+    background-color: rgb(66, 66, 66, .3);
+    grid-area: accion__titulo;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.accion__titulo h2{
+    text-align: center;
+    margin-left: 4vw;
+}
+.accion__contenedor{
+    grid-area: accion__contenedor;
+}
+.accion__contenedor2{
+    grid-area: accion__contenedor2;
+}
+.accion__contenedor3{
+    grid-area: accion__contenedor3;
+}
+.accion__contenedor4{
+    grid-area: accion__contenedor4;
+}
+
+/*------------------------------------------romance---------------------*/
+.romance__figures{
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.romance__imagen{
+    width: 90%;
+    height: 100%;
+   
+}
+.romance__Nombre{
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    z-index: 5 !important;
+}
+.romance__titulo{
+    position: relative;
+    width: 100%;
+    background-color: rgb(66, 66, 66, .3);
+    grid-area: romance__titulo;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.romance__titulo h2{
+    text-align: center;
+    margin-left: 4vw;
+}
+.romance__contenedor{
+    grid-area: romance__contenedor;
+}
+.romance__contenedor2{
+    grid-area: romance__contenedor2;
+}
+.romance__contenedor3{
+    grid-area: romance__contenedor3;
+}
+.romance__contenedor4{
+    grid-area: romance__contenedor4;
+}
